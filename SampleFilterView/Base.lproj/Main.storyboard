@@ -12,7 +12,7 @@
         <!--Main View Controller-->
         <scene sceneID="IJg-fX-g2J">
             <objects>
-                <tableViewController id="XsF-0P-zDv" customClass="MainViewController" customModule="SampleFilterView" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MainViewController" id="XsF-0P-zDv" customClass="MainViewController" customModule="SampleFilterView" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="NBL-gj-0SN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,6 +36,9 @@
                                                     <state key="normal" title="絞込1">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="clickFilter:" destination="XsF-0P-zDv" eventType="touchUpInside" id="863-kC-TaS"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbT-Jl-zxR">
                                                     <rect key="frame" x="136" y="15" width="100" height="30"/>
@@ -46,6 +49,9 @@
                                                     <state key="normal" title="絞込2">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="clickFilter:" destination="XsF-0P-zDv" eventType="touchUpInside" id="V6y-Cu-bQB"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOt-hy-H9J">
                                                     <rect key="frame" x="252" y="15" width="100" height="30"/>
@@ -56,6 +62,9 @@
                                                     <state key="normal" title="絞込3">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="clickFilter:" destination="XsF-0P-zDv" eventType="touchUpInside" id="45v-AU-elk"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2m-G3-ugw">
                                                     <rect key="frame" x="368" y="15" width="100" height="30"/>
@@ -66,6 +75,9 @@
                                                     <state key="normal" title="絞込4">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="clickFilter:" destination="XsF-0P-zDv" eventType="touchUpInside" id="ALt-RA-bGw"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.98039215690000003" green="0.3921568627" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -140,6 +152,41 @@
             </objects>
             <point key="canvasLocation" x="2346.4000000000001" y="434.03298350824593"/>
         </scene>
+        <!--Filter View Controller-->
+        <scene sceneID="bIJ-Kv-UNW">
+            <objects>
+                <tableViewController storyboardIdentifier="FilterViewController" id="f2w-0e-QUL" customClass="FilterViewController" customModule="SampleFilterView" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="kGd-bB-cW7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="FilterCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="FilterCell" id="l7E-X2-dsw">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="l7E-X2-dsw" id="wri-tx-alv">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="f2w-0e-QUL" id="WEw-H4-edn"/>
+                            <outlet property="delegate" destination="f2w-0e-QUL" id="Fc7-B3-KLX"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="e0f-5S-FCy">
+                        <barButtonItem key="rightBarButtonItem" title="閉じる" id="nZD-DW-hB6">
+                            <connections>
+                                <action selector="clickClose:" destination="f2w-0e-QUL" id="kTT-E9-IxF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XBD-dD-3Hh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4028" y="426"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="JU2-7O-cm1">
             <objects>
@@ -157,6 +204,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I7D-Cd-fDV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1405.5999999999999" y="433.13343328335833"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pcy-Ls-JHc">
+            <objects>
+                <navigationController storyboardIdentifier="FilterNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="zhn-A7-vJk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="V5e-WS-Z2p">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="f2w-0e-QUL" kind="relationship" relationship="rootViewController" id="K2s-52-ThD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OQ5-3w-pcG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3184.8000000000002" y="426.83658170914543"/>
         </scene>
     </scenes>
 </document>

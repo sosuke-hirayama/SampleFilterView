@@ -13,7 +13,7 @@ class MainViewController: UITableViewController {
     
     @IBOutlet weak var tagsView: ASJTagsView!
     let searchResults = ["検索結果1", "検索結果2", "検索結果3", "検索結果4", "検索結果5", "検索結果6", "検索結果7", "検索結果8", "検索結果9", "検索結果10", "検索結果11", "検索結果12", "検索結果13", "検索結果14", "検索結果15", "検索結果16", "検索結果17", "検索結果18", "検索結果19", "検索結果20"]
-    let selectedFilter = ["条件1", "条件2", "条件3"]
+    let selectedFilter = ["条件6", "条件2", "条件5"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +33,15 @@ class MainViewController: UITableViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
+
+    @IBAction func clickFilter(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "FilterNavigationController") as! UINavigationController
+        vc.modalPresentationStyle = .custom
+        vc.transitioningDelegate = self
+        self.present(vc, animated: true, completion: nil)
+    }
+
 
     // MARK: - Table view data source
 
@@ -53,3 +60,11 @@ class MainViewController: UITableViewController {
     }
 
 }
+
+extension MainViewController: UIViewControllerTransitioningDelegate {
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        return ModalPresentationController(presentedViewController: presented, presenting: presenting)
+    }
+}
+
+

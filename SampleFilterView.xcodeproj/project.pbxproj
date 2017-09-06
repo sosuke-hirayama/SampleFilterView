@@ -14,6 +14,8 @@
 		39D740971F5F854A00571244 /* SampleFilterViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D740961F5F854A00571244 /* SampleFilterViewTests.swift */; };
 		39D740A21F5F854A00571244 /* SampleFilterViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D740A11F5F854A00571244 /* SampleFilterViewUITests.swift */; };
 		39D740B01F5F899800571244 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D740AF1F5F899800571244 /* MainViewController.swift */; };
+		39D740B31F5F9AAD00571244 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D740B21F5F9AAD00571244 /* FilterViewController.swift */; };
+		39D740B51F5F9BDB00571244 /* ModalPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D740B41F5F9BDB00571244 /* ModalPresentationController.swift */; };
 		9164C10BF933F79B4E9C8CF2 /* Pods_SampleFilterViewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E69AD0BD5E849A10ADA9E5EF /* Pods_SampleFilterViewTests.framework */; };
 		A148139B7F3F1FD418D9DC72 /* Pods_SampleFilterViewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEBC2BDAC69B6F5A3FB29AEB /* Pods_SampleFilterViewUITests.framework */; };
 		CDCFBF6F18E52F8D28FFE7D3 /* Pods_SampleFilterView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F03A1F08D29EDEE22B2EA58C /* Pods_SampleFilterView.framework */; };
@@ -52,6 +54,8 @@
 		39D740A11F5F854A00571244 /* SampleFilterViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleFilterViewUITests.swift; sourceTree = "<group>"; };
 		39D740A31F5F854A00571244 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39D740AF1F5F899800571244 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		39D740B21F5F9AAD00571244 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		39D740B41F5F9BDB00571244 /* ModalPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalPresentationController.swift; sourceTree = "<group>"; };
 		61CA02FCF781B25142C5546A /* Pods-SampleFilterViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleFilterViewTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SampleFilterViewTests/Pods-SampleFilterViewTests.release.xcconfig"; sourceTree = "<group>"; };
 		A023A6884E57D34B4940B27A /* Pods-SampleFilterViewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleFilterViewUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SampleFilterViewUITests/Pods-SampleFilterViewUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B6470DB376433000FB494C21 /* Pods-SampleFilterView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleFilterView.release.xcconfig"; path = "Pods/Target Support Files/Pods-SampleFilterView/Pods-SampleFilterView.release.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +137,8 @@
 				39D7408A1F5F854A00571244 /* LaunchScreen.storyboard */,
 				39D7408D1F5F854A00571244 /* Info.plist */,
 				39D740AF1F5F899800571244 /* MainViewController.swift */,
+				39D740B21F5F9AAD00571244 /* FilterViewController.swift */,
+				39D740B41F5F9BDB00571244 /* ModalPresentationController.swift */,
 			);
 			path = SampleFilterView;
 			sourceTree = "<group>";
@@ -458,8 +464,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39D740B31F5F9AAD00571244 /* FilterViewController.swift in Sources */,
 				39D740B01F5F899800571244 /* MainViewController.swift in Sources */,
 				39D740821F5F854A00571244 /* AppDelegate.swift in Sources */,
+				39D740B51F5F9BDB00571244 /* ModalPresentationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -712,6 +720,7 @@
 				39D740A81F5F854A00571244 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		39D740A91F5F854A00571244 /* Build configuration list for PBXNativeTarget "SampleFilterViewTests" */ = {
 			isa = XCConfigurationList;
@@ -720,6 +729,7 @@
 				39D740AB1F5F854A00571244 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		39D740AC1F5F854A00571244 /* Build configuration list for PBXNativeTarget "SampleFilterViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -728,6 +738,7 @@
 				39D740AE1F5F854A00571244 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
